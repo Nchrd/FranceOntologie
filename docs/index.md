@@ -28,7 +28,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Entité
 
-> [!NOTE]
 > Cette classe comprend toutes les autres classes de cette ontologie. Elle est la racine de tout et est la classe mère de toutes les classes par héritage.
 
 **Classe mère :** Aucune
@@ -49,7 +48,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Ministère
 
-> [!NOTE]
 > Classe regroupant tous les ministères.
 
 **Classe mère :** [C1 : Entité](#c1--entité)
@@ -64,7 +62,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Direction Centrale
 
-> [!NOTE]
 > Classe regroupant toutes les entités agissant à l'échelle nationale et qui dépendent d'un ministère.
 
 **Classe mère :** [C1 : Entité](#c1--entité)
@@ -79,7 +76,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administration Publique
 
-> [!NOTE]
 > Classe regroupant toutes les administrations publiques, quelles que soient leur échelle.
 
 **Classe mère :** [C1 : Entité](#c1--entité)
@@ -98,7 +94,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Entreprise publique
 
-> [!NOTE]
 > Classe regroupant toutes les entreprises publiques.
 
 **Classe mère :** [C1 : Entité](#c1--entité)
@@ -113,7 +108,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Organisme Divers d'Administration Centrale
 
-> [!NOTE]
 > Classe regroupant toutes les ODAC, qui sont un type d'administration publique.
 
 **Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
@@ -131,7 +125,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administration Publique Locale
 
-> [!NOTE]
 > Classe regroupant toutes les APUL, qui sont un type d'administration publique.
 
 **Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
@@ -148,7 +141,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administration de Sécurité Sociale
 
-> [!NOTE]
 > Classe regroupant toutes les Administrations de Sécurité Sociale, qui sont un type d'administration publique.
 
 **Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
@@ -163,7 +155,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Service à Compétence Nationale
 
-> [!NOTE]
 > Classe regroupant tous les Services à Compétence Nationale, qui sont un type d'administration publique.
 
 **Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
@@ -178,7 +169,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Établissement Public à Caractère Industriel et Commercial
 
-> [!NOTE]
 > Classe regroupant toutes les EPIC, qui sont un type d'ODAC.
 
 **Classe mère :** [C6 : ODAC](#c6--odac)
@@ -193,7 +183,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Établissement Public à Caractère Administratif
 
-> [!NOTE]
 > Classe regroupant toutes les EPA, qui sont un type d'ODAC.
 
 **Classe mère :** [C6 : ODAC](#c6--odac)
@@ -208,7 +197,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Autorité Administrative Indépendante
 
-> [!NOTE]
 > Classe regroupant toutes les AAI, qui sont un type d'ODAC.
 
 **Classe mère :** [C6 : ODAC](#c6--odac)
@@ -223,7 +211,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administration Territoriale
 
-> [!NOTE]
 > Classe regroupant toutes les Administrations Territoriales, qui sont un type d'APUL.
 
 **Classe mère :** [C7 : APUL](#c7--apul)
@@ -238,7 +225,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administration Locale Diverse
 
-> [!NOTE]
 > Classe regroupant toutes les Administrations Territoriales autres que les APUL.
 
 **Classe mère :** [C7 : APUL](#c7--apul)
@@ -255,7 +241,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Administre
 
-> [!NOTE]
 > Relation de dépendance entre deux entités.
 
 **Domaine :** [C1 : Entité](#c1--entité)
@@ -268,7 +253,6 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Nom complet :** Possède
 
-> [!NOTE]
 > Relation de possession entre une entité et une entreprise publique.
 
 **Domaine :** [C1 : Entité](#c1--entité)

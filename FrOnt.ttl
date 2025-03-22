@@ -2,80 +2,80 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-@prefix front: <https://nchrd.github.io/FranceOntologie#> .
+@prefix front: <https://nchrd.github.io/FranceOntologie/index.html#> .
 
-<https://nchrd.github.io/FranceOntologie#> rdf:type owl:Ontology .
+<https://nchrd.github.io/FranceOntologie/index.html#> rdf:type owl:Ontology .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-front:c1_Entité a rdfs:Class ;
+front:c1_Entité rdf:type rdfs:Class ;
     rdfs:label "Entité" ;
     rdfs:comment "Classe racine, origine de tout." .
 
-front:c2_Ministère a rdfs:Class ;
+front:c2_Ministère rdf:type rdfs:Class ;
     rdfs:label "Ministère" ;
     rdfs:comment "Classe regroupant tous les ministères." ;
     rdfs:subClassOf front:c1_Entité .
 
-front:c3_Direction_Centrale a rdfs:Class ;
+front:c3_Direction_Centrale rdf:type rdfs:Class ;
     rdfs:label "Direction Centrale" ;
     rdfs:comment "Classe regroupant toutes les entités agissant à l'échelle nationale et qui dépendent d'un ministère." ;
     rdfs:subClassOf front:c1_Entité .
 
-front:c4_Administration_Publique a rdfs:Class ;
+front:c4_Administration_Publique rdf:type rdfs:Class ;
     rdfs:label "Administration Publique" ;
     rdfs:comment "Classe regroupant toutes les administratiions publiques, quelles que soient leur échelle." ;
     rdfs:subClassOf front:c1_Entité .
 
-front:c5_Entreprise_Publique a rdfs:Class ;
+front:c5_Entreprise_Publique rdf:type rdfs:Class ;
     rdfs:label "Entreprise publique" ;
     rdfs:comment "Classe regroupant toutes les entreprises publiques." ;
     rdfs:subClassOf front:c1_Entité .
 
-front:c6_ODAC a rdfs:Class ;
+front:c6_ODAC rdf:type rdfs:Class ;
     rdfs:label "Organisme Divers d'Administration Centrale" ;
     rdfs:comment "Classe regroupant toutes les ODAC, qui sont un type d'administration publique" ;
     rdfs:subClassOf front:c4_Administration_Publique .
 
-front:c7_APUL a rdfs:Class ;
+front:c7_APUL rdf:type rdfs:Class ;
     rdfs:label "Administration Publique Locale" ;
     rdfs:comment "Classe regroupant toutes les APUL, qui sont un type d'administration publique" ;
     rdfs:subClassOf front:c4_Administration_Publique .
 
-front:c8_ASSO a rdfs:Class ;
+front:c8_ASSO rdf:type rdfs:Class ;
     rdfs:label "Administration de Sécurité Sociale" ;
     rdfs:comment "Classe regroupant toutes les Administrations de Sécurité Sociale, qui sont un type d'administration publique" ;
     rdfs:subClassOf front:c4_Administration_Publique .
 
-front:c9_SCN a rdfs:Class ;
+front:c9_SCN rdf:type rdfs:Class ;
     rdfs:label "Service à Compétence Nationale" ;
     rdfs:comment "Classe regroupant tous les Services à Compétence Nationale, qui sont un type d'administration publique" ;
     rdfs:subClassOf front:c4_Administration_Publique .
 
-front:c10_EPIC a rdfs:Class ;
+front:c10_EPIC rdf:type rdfs:Class ;
     rdfs:label "Établissement Public à Caractère Industriel et Commercial" ;
     rdfs:comment "Classe regroupant toutes les EPIC, qui sont un type d'ODAC" ;
     rdfs:subClassOf front:c6_ODAC .
 
-front:c11_EPA a rdfs:Class ;
+front:c11_EPA rdf:type rdfs:Class ;
     rdfs:label "Établissement Public à Caractère Administratif" ;
     rdfs:comment "Classe regroupant toutes les EPA, qui sont un type d'ODAC" ;
     rdfs:subClassOf front:c6_ODAC .
 
-front:c12_AAI a rdfs:Class ;
+front:c12_AAI rdf:type rdfs:Class ;
     rdfs:label "Autorité Administrative Indépendante" ;
     rdfs:comment "Classe regroupant toutes les AAI, qui sont un type d'ODAC" ;
     rdfs:subClassOf front:c6_ODAC .
 
-front:c13_Administration_Territoriale a rdfs:Class ;
+front:c13_Administration_Territoriale rdf:type rdfs:Class ;
     rdfs:label "Administration Territioriale" ;
     rdfs:comment "Classe regroupant toutes les Administrations Territoriales, qui sont un type d'APUL" ;
     rdfs:subClassOf front:c7_APUL .
 
-front:c14_Administration_Locale_Diverse a rdfs:Class ;
+front:c14_Administration_Locale_Diverse rdf:type rdfs:Class ;
     rdfs:label "Administration Locale Diverse" ;
     rdfs:comment "Classe regroupant toutes les Administrations Territoriales autres que les APUL" ;
     rdfs:subClassOf front:c7_APUL .
@@ -85,13 +85,13 @@ front:c14_Administration_Locale_Diverse a rdfs:Class ;
 #################################################################
 
 
-front:p1_Administre a rdf:Property ;
+front:p1_Administre rdf:type rdf:Property ;
     rdfs:label "Dépend de" ;
     rdfs:comment "Relation de dépendance entre deux entités" ;
     rdfs:domain front:c1_Entité ;
     rdfs:range front:c1_Entité .
 
-front:p2_Possède a rdf:Property ;
+front:p2_Possède rdf:type rdf:Property ;
     rdfs:label "Possède" ;
     rdfs:comment "Relation de possession entre une entité et une entreprise publique" ;
     rdfs:domain front:c1_Entité ;

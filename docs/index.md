@@ -1,9 +1,5 @@
 Cette documentation présente une ontologie conçue pour modéliser les entités gouvernementales en France. L'objectif de cette ontologie est de fournir une structure claire et cohérente pour représenter les différentes entités gouvernementales, leurs relations et leurs responsabilités.
 
-### Pourquoi une Ontologie Gouvernementale ?
-
-Les gouvernements modernes sont composés de nombreuses entités interconnectées, chacune ayant des rôles et des responsabilités spécifiques. Une ontologie permet de formaliser ces relations et de les rendre explicites, facilitant ainsi la compréhension et l'analyse des structures gouvernementales.
-
 ### Que Contient cette Ontologie ?
 
 L'ontologie gouvernementale comprend les principales classes d'entités gouvernementales, telles que les ministères, les secrétariats et les services déconcentrés. Elle définit également les propriétés et les relations entre ces entités, permettant de modéliser des hiérarchies et des responsabilités complexes.

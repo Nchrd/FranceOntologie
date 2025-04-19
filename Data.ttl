@@ -1,0 +1,7 @@
+@prefix front: <https://nchrd.github.io/FranceOntologie/index.html#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+front:presidence_republique a front:c1_Entité ;
+    dcterms:title "Présidence de la République" ;
+    dcterms:description "La présidence de la République française est l'institution qui représente le chef de l'État français." .

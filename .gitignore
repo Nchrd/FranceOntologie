@@ -3,6 +3,10 @@ scripts/bin/
 scripts/include/
 scripts/lib/
 scripts/lib64/
+scripts/share/
 scripts/pyvenv.cfg
+*/__pycache__/
 *.png
 !modèle.png
+*.dot
+*.html

@@ -86,7 +86,7 @@ front:c14_Administration_Locale_Diverse rdf:type rdfs:Class ;
 
 
 front:p1_Administre rdf:type rdf:Property ;
-    rdfs:label "Dépend de" ;
+    rdfs:label "Administre" ;
     rdfs:comment "Relation de dépendance entre deux entités" ;
     rdfs:domain front:c1_Entité ;
     rdfs:range front:c1_Entité .

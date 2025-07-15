@@ -1,7 +1,7 @@
 from rdflib import Graph, RDFS, RDF
 import re
 
-def getLabelOrShortName(uri, g):
+def getLabelOrShortName(uri: str, g: Graph) -> str:
     """
     Get the label or short name of a URI from the RDF graph.
 
@@ -35,10 +35,10 @@ def getClassesFromModel(g: Graph) -> list:
     :return: A list of classes in the model.
     :rtype: list
     """
-    classes = set()
+    classes = list()
     for s, p, o in g.triples((None, RDF.type, None)):
         if o == RDFS.Class:
-            classes.add(s)
+            classes.append(s)
     return classes
 
 def getPropertiesFromModel(g: Graph) -> list:
@@ -51,8 +51,23 @@ def getPropertiesFromModel(g: Graph) -> list:
     :return: A list of properties in the model.
     :rtype: list
     """
-    properties = set()
+    properties = list()
     for s, p, o in g.triples((None, RDF.type, None)):
         if o == RDF.Property:
-            properties.add(s)
+            properties.append(s)
     return properties
+
+def getAllDataElements(g: Graph) -> list:
+    """
+    Get all the data elements from the RDF Model.
+    
+    :param g: The RDF model to search in.
+    :type g: Graph
+    
+    :return: A list of data elements in the model.
+    :rtype: list
+    """
+    dataElements = list()
+    for s, p, o in g.triples((None, RDF.type, None)):
+        dataElements.append(s)
+    return dataElements

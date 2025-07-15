@@ -91,9 +91,9 @@ def generateDataHtmlGraph(g: Graph, outputFile: str = "data.html"):
             continue
         
         # Get the label or short name for the subject, predicate, and object
-        subj_label = getLabelOrShortName(subj, g)
-        obj_label = getLabelOrShortName(obj, g)
-        pred_label = getLabelOrShortName(pred, g)
+        subj_label = getLabelOrShortName(str(subj), g)
+        obj_label = getLabelOrShortName(str(obj), g)
+        pred_label = getLabelOrShortName(str(pred), g)
 
         # Add nodes and edges to the pyvis Network
         net.add_node(str(subj), label=subj_label, shape="ellipse")

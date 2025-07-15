@@ -1,4 +1,4 @@
-from rdflib import Graph, RDFS, RDF
+from rdflib import Graph, RDFS, RDF, URIRef
 import re
 
 def getLabelOrShortName(uri: str, g: Graph) -> str:
@@ -13,7 +13,7 @@ def getLabelOrShortName(uri: str, g: Graph) -> str:
     :rtype: str
     """
     
-    for label in g.objects(uri, RDFS.label):
+    for label in g.objects(URIRef(uri), RDFS.label):
         return str(label)
     
     uri = str(uri)

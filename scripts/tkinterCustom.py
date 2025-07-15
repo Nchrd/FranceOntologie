@@ -20,7 +20,7 @@ class AutocompleteCombobox(ttk.Frame):
         self.var.trace_add('write', self._on_change)
         self.entry.bind('<Down>', lambda e: self._open_list())
         self.entry.bind('<Up>',   lambda e: self._open_list())
-        self.entry.bind('<Return>', self._select_current)
+        self.entry.bind('<Return>', lambda e: self._select_current())
 
     def set_completion_list(self, completion_list):
         self._completion_list = completion_list

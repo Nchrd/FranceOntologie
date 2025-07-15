@@ -11,11 +11,11 @@
 #    Classes
 #################################################################
 
-front:c1_Entité rdf:type rdfs:Class ;
+front:c1_Entite rdf:type rdfs:Class ;
     rdfs:label "Entité" ;
     rdfs:comment "Classe racine, origine de tout." .
 
-front:c2_Ministère rdf:type rdfs:Class ;
+front:c2_Ministere rdf:type rdfs:Class ;
     rdfs:label "Ministère" ;
     rdfs:comment "Classe regroupant tous les ministères." ;
     rdfs:subClassOf front:c1_Entité .
@@ -91,7 +91,7 @@ front:p1_Administre rdf:type rdf:Property ;
     rdfs:domain front:c1_Entité ;
     rdfs:range front:c1_Entité .
 
-front:p2_Possède rdf:type rdf:Property ;
+front:p2_Possede rdf:type rdf:Property ;
     rdfs:label "Possède" ;
     rdfs:comment "Relation de possession entre une entité et une entreprise publique" ;
     rdfs:domain front:c1_Entité ;

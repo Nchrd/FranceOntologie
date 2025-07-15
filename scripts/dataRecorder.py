@@ -1,10 +1,10 @@
-from tkinter import *
+from tkinter import Tk, Label, Frame, Entry, Button, YES
 from tkinter import ttk
-
-from rdflib import Graph, Namespace, URIRef, Literal, RDF
+from rdflib import RDFS, Graph, Namespace, URIRef, Literal, RDF
 
 from rdfFilters import getClassesFromModel, getPropertiesFromModel, getLabelOrShortName, getAllDataElements
 from tkinterCustom import AutocompleteCombobox
+import unicodedata
 
 def loadOntology(ontologyFile :str, classesNames :list, propertiesNames :list):
     """
@@ -142,20 +142,82 @@ def submitForm():
     dependanceProperty = dependencyComboBox.get()
     dependanceValue = valueComboBox.get()
 
-    # If the title is empty, show an error message
+    # If the title is empty, show an error message for a few seconds
     if not title:
         errorLabel = Label(formFrame, text="Erreur : Le nom de la donnée ne peut pas être vide.", font=("Arial", 12), bg="lightgray", fg="red")
         errorLabel.pack()
+        window.after(3000, errorLabel.destroy)  # Remove after 3 seconds
         return
-    
-    # If the description is empty, show an error message
+
+    # If the description is empty, show an error message for a few seconds
     if not description:
         errorLabel = Label(formFrame, text="Erreur : La description de la donnée ne peut pas être vide.", font=("Arial", 12), bg="lightgray", fg="red")
         errorLabel.pack()
+        window.after(3000, errorLabel.destroy)  # Remove after 3 seconds
         return
     
-    test = Graph()
     FRONT = Namespace("https://nchrd.github.io/FranceOntologie/index.html#")
+    # Load the existing data graph
+    data_graph = Graph()
+    data_graph.parse("./../Data.ttl", format="turtle")
+
+    # Reload ontology to get property URIs
+    ontology_graph = Graph()
+    ontology_graph.parse("./../FrOnt.ttl", format="turtle")
+
+    # Define normalization function
+    def normalize_label(label):
+        # Remove accents and convert to lowercase with underscores
+        label = unicodedata.normalize('NFD', label)
+        label = ''.join([c for c in label if unicodedata.category(c) != 'Mn'])
+        label = label.casefold().replace(" ", "_")
+        return label
+
+    # Create a new URI for the data element
+    normalized_title = normalize_label(title)
+    new_data_uri = FRONT[normalized_title]
+
+    classes = getClassesFromModel(ontology_graph)
+    class_uri = None
+    for c in classes:
+        if getLabelOrShortName(c, ontology_graph) == selectedClass:
+            class_uri = c
+            break
+
+    if class_uri is None:
+        errorLabel = Label(formFrame, text="Erreur : Classe sélectionnée invalide.", font=("Arial", 12), bg="lightgray", fg="red")
+        errorLabel.pack()
+        window.after(3000, errorLabel.destroy)
+        return
+
+    # Add triples for the new data element
+    data_graph.add((new_data_uri, RDF.type, class_uri))
+    data_graph.add((new_data_uri, RDFS["label"], Literal(title)))
+    data_graph.add((new_data_uri, RDFS["comment"], Literal(description)))
+
+    # Add dependency property if selected and not "Aucune"
+    if dependanceProperty != "Aucune" and dependanceValue:
+        # Find the URI of the dependency property from the ontology model
+        try:
+            properties = getPropertiesFromModel(ontology_graph)
+            # Normalize title for URI creation
+            normalized_title = normalize_label(title)
+            new_data_uri = FRONT[normalized_title]
+            property_uri = None
+            for p in properties:
+                if getLabelOrShortName(p, ontology_graph) == dependanceProperty:
+                    property_uri = p
+                    break
+
+            value_index = dataElementsName.index(dependanceValue)
+            value_uri = dataElementsURI[value_index]
+            if property_uri:
+                data_graph.add((value_uri, property_uri, new_data_uri))
+        except ValueError:
+            pass  # Value not found, skip
+
+    # Save the updated graph back to the file
+    data_graph.serialize("./../Data.ttl", format="turtle")
     
     return 0
 

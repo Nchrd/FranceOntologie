@@ -1,11 +1,11 @@
 @prefix front: <https://nchrd.github.io/FranceOntologie/index.html#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-front:presidence_republique a front:c1_Entité ;
+front:presidence_republique a front:c1_Entite ;
     rdfs:label "Présidence de la République" ;
     rdfs:comment "La présidence de la République française est l'institution qui représente le chef de l'État français." ;
     front:p1_Administre front:cabinet_premier_ministre .
 
-front:cabinet_premier_ministre a front:c1_Entité ;
+front:cabinet_premier_ministre a front:c1_Entite ;
     rdfs:label "Cabinet du Premier ministre" ;
     rdfs:comment "Le cabinet du Premier ministre est l'ensemble des conseillers et collaborateurs qui assistent le Premier ministre dans l'exercice de ses fonctions." .

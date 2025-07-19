@@ -1,3 +1,7 @@
+---
+title: France Ontologie
+---
+
 Cette documentation présente une ontologie conçue pour modéliser les entités gouvernementales en France. L'objectif de cette ontologie est de fournir une structure claire et cohérente pour représenter les différentes entités gouvernementales, leurs relations et leurs responsabilités.
 
 ### Que Contient cette Ontologie ?

@@ -24,6 +24,8 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 # Classes
 
+---
+
 ## C1 : Entité {#c1_Entite}
 
 **Nom complet :** Entité
@@ -101,8 +103,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Classes filles :** Aucune
 
-**Propriétés :** 
-- [P2 : Possède](#p2_Possede) &rarr; [C5 : Entreprise publique](#c5_Entreprise_Publique)
+**Propriétés :** Aucune
 
 ---
 

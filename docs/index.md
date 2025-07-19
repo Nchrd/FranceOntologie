@@ -35,8 +35,8 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 - [C5 : Entreprise publique](#c5_Entreprise_Publique)
 
 **Propriétés :**
-- [P1 : Administre](#p1_administre) &rarr; [C1 : Entité](#c1_Entite)
-- [P2 : Possède](#p2_possède) &rarr; [C5 : Entreprise publique](#c5_Entreprise_Publique)
+- [P1 : Administre](#p1_Administre) &rarr; [C1 : Entité](#c1_Entite)
+- [P2 : Possède](#p2_Possede) &rarr; [C5 : Entreprise publique](#c5_Entreprise_Publique)
 
 ---
 
@@ -97,7 +97,8 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 **Classes filles :** Aucune
 
-**Propriétés :** Aucune
+**Propriétés :** 
+- [P2 : Possède](#p2_Possede) &rarr; [C5 : Entreprise publique](#c5_Entreprise_Publique)
 
 ---
 
@@ -248,7 +249,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 # Propriétés
 
-## P1 : Administre
+## P1 : Administre {#p1_Administre}
 
 **Nom complet :** Administre
 
@@ -260,7 +261,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## P2 : Possède
+## P2 : Possède {#p2_Possede}
 
 **Nom complet :** Possède
 

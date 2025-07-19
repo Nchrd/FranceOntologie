@@ -20,7 +20,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 # Classes
 
-## C1 : Entité
+## C1 : Entité {#c1_Entite}
 
 **Nom complet :** Entité
 
@@ -29,24 +29,24 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 **Classe mère :** Aucune
 
 **Classes filles :**
-- [C2 : Ministère](#c2--ministère)
-- [C3 : Direction Centrale](#c3--direction-centrale)
-- [C4 : Administration Publique](#c4--administration-publique)
-- [C5 : Entreprise publique](#c5--entreprise-publique)
+- [C2 : Ministère](#c2_Ministere)
+- [C3 : Direction Centrale](#c3_Direction_Centrale)
+- [C4 : Administration Publique](#c4_Administration_Publique)
+- [C5 : Entreprise publique](#c5_Entreprise_Publique)
 
 **Propriétés :**
-- [P1 : Administre](#p1--administre) &rarr; [C1 : Entité](#c1--entité)
-- [P2 : Possède](#p2--possède) &rarr; [C5 : Entreprise publique](#c5--entreprise-publique)
+- [P1 : Administre](#p1_administre) &rarr; [C1 : Entité](#c1_Entite)
+- [P2 : Possède](#p2_possède) &rarr; [C5 : Entreprise publique](#c5_Entreprise_Publique)
 
 ---
 
-## C2 : Ministère
+## C2 : Ministère {#c2_Ministere}
 
 **Nom complet :** Ministère
 
 > Classe regroupant tous les ministères.
 
-**Classe mère :** [C1 : Entité](#c1--entité)
+**Classe mère :** [C1 : Entité](#c1_Entite)
 
 **Classes filles :** Aucune
 
@@ -54,13 +54,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C3 : Direction Centrale
+## C3 : Direction Centrale {#c3_Direction_Centrale}
 
 **Nom complet :** Direction Centrale
 
 > Classe regroupant toutes les entités agissant à l'échelle nationale et qui dépendent d'un ministère.
 
-**Classe mère :** [C1 : Entité](#c1--entité)
+**Classe mère :** [C1 : Entité](#c1_Entite)
 
 **Classes filles :** Aucune
 
@@ -68,31 +68,32 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C4 : Administration Publique
+## C4 : Administration Publique {#c4_Administration_Publique}
 
 **Nom complet :** Administration Publique
 
 > Classe regroupant toutes les administrations publiques, quelles que soient leur échelle.
 
-**Classe mère :** [C1 : Entité](#c1--entité)
+**Classe mère :** [C1 : Entité](#c1_Entite)
 
 **Classes filles :**
-- [C6 : ODAC](#c6--odac)
-- [C7 : APUL](#c7--apul)
-- [C8 : ASSO](#c8--asso)
-- [C9 : SCN](#c9--scn)
+- [C6 : ODAC](#c6_ODAC)
+- [C7 : APUL](#c7_APUL)
+- [C8 : ASSO](#c8_ASSO)
+- [C9 : SCN](#c9_SCN)
+- [C15 : GIP](#c15_GIP)
 
 **Propriétés :** Aucune
 
 ---
 
-## C5 : Entreprise publique
+## C5 : Entreprise publique {#c5_Entreprise_Publique}
 
 **Nom complet :** Entreprise publique
 
 > Classe regroupant toutes les entreprises publiques.
 
-**Classe mère :** [C1 : Entité](#c1--entité)
+**Classe mère :** [C1 : Entité](#c1_Entite)
 
 **Classes filles :** Aucune
 
@@ -100,46 +101,46 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C6 : ODAC
+## C6 : ODAC {#c6_ODAC}
 
 **Nom complet :** Organisme Divers d'Administration Centrale
 
 > Classe regroupant toutes les ODAC, qui sont un type d'administration publique.
 
-**Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
+**Classe mère :** [C4 : Administration Publique](#c4_Administration_Publique)
 
 **Classes filles :**
-- [C10 : EPIC](#c10--epic)
-- [C11 : EPA](#c11--epa)
-- [C12 : AAI](#c12--aai)
+- [C10 : EPIC](#c10_EPIC)
+- [C11 : EPA](#c11_EPA)
+- [C12 : AAI](#c12_AAI)
 
 **Propriétés :** Aucune
 
 ---
 
-## C7 : APUL
+## C7 : APUL {#c7_APUL}
 
 **Nom complet :** Administration Publique Locale
 
 > Classe regroupant toutes les APUL, qui sont un type d'administration publique.
 
-**Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
+**Classe mère :** [C4 : Administration Publique](#c4_Administration_Publique)
 
 **Classes filles :**
-- [C13 : Administration Territoriale](#c13--administration-territoriale)
-- [C14 : Administration Locale Diverse](#c14--administration-locale-diverse)
+- [C13 : Administration Territoriale](#c13_Administration_Territoriale)
+- [C14 : Administration Locale Diverse](#c14_Administration_Locale_Diverse)
 
 **Propriétés :** Aucune
 
 ---
 
-## C8 : ASSO
+## C8 : ASSO {#c8_ASSO}
 
 **Nom complet :** Administration de Sécurité Sociale
 
 > Classe regroupant toutes les Administrations de Sécurité Sociale, qui sont un type d'administration publique.
 
-**Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
+**Classe mère :** [C4 : Administration Publique](#c4_Administration_Publique)
 
 **Classes filles :** Aucune
 
@@ -147,13 +148,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C9 : SCN
+## C9 : SCN {#c9_SCN}
 
 **Nom complet :** Service à Compétence Nationale
 
 > Classe regroupant tous les Services à Compétence Nationale, qui sont un type d'administration publique.
 
-**Classe mère :** [C4 : Administration Publique](#c4--administration-publique)
+**Classe mère :** [C4 : Administration Publique](#c4_Administration_Publique)
 
 **Classes filles :** Aucune
 
@@ -161,13 +162,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C10 : EPIC
+## C10 : EPIC {#c10_EPIC}
 
 **Nom complet :** Établissement Public à Caractère Industriel et Commercial
 
 > Classe regroupant toutes les EPIC, qui sont un type d'ODAC.
 
-**Classe mère :** [C6 : ODAC](#c6--odac)
+**Classe mère :** [C6 : ODAC](#c6_ODAC)
 
 **Classes filles :** Aucune
 
@@ -175,13 +176,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C11 : EPA
+## C11 : EPA {#c11_EPA}
 
 **Nom complet :** Établissement Public à Caractère Administratif
 
 > Classe regroupant toutes les EPA, qui sont un type d'ODAC.
 
-**Classe mère :** [C6 : ODAC](#c6--odac)
+**Classe mère :** [C6 : ODAC](#c6_ODAC)
 
 **Classes filles :** Aucune
 
@@ -189,13 +190,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C12 : AAI
+## C12 : AAI {#c12_AAI}
 
 **Nom complet :** Autorité Administrative Indépendante
 
 > Classe regroupant toutes les AAI, qui sont un type d'ODAC.
 
-**Classe mère :** [C6 : ODAC](#c6--odac)
+**Classe mère :** [C6 : ODAC](#c6_ODAC)
 
 **Classes filles :** Aucune
 
@@ -203,13 +204,13 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C13 : Administration Territoriale
+## C13 : Administration Territoriale {#c13_Administration_Territoriale}
 
 **Nom complet :** Administration Territoriale
 
 > Classe regroupant toutes les Administrations Territoriales, qui sont un type d'APUL.
 
-**Classe mère :** [C7 : APUL](#c7--apul)
+**Classe mère :** [C7 : APUL](#c7_APUL)
 
 **Classes filles :** Aucune
 
@@ -217,13 +218,27 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 ---
 
-## C14 : Administration Locale Diverse
+## C14 : Administration Locale Diverse {#c14_Administration_Locale_Diverse}
 
 **Nom complet :** Administration Locale Diverse
 
 > Classe regroupant toutes les Administrations Territoriales autres que les APUL.
 
-**Classe mère :** [C7 : APUL](#c7--apul)
+**Classe mère :** [C7 : APUL](#c7_APUL)
+
+**Classes filles :** Aucune
+
+**Propriétés :** Aucune
+
+---
+
+## C15 : GIP {#c15_GIP}
+
+**Nom complet :** Groupement d'Intérêt public
+
+> Classe regroupant tous les Groupements d'Intérets Publics
+
+**Classe mère :** [C4 : Administration publique](#c4_Administration_Publique)
 
 **Classes filles :** Aucune
 
@@ -239,9 +254,9 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 > Relation de dépendance entre deux entités.
 
-**Domaine :** [C1 : Entité](#c1--entité)
+**Domaine :** [C1 : Entité](#c1_Entite)
 
-**Portée :** [C1 : Entité](#c1--entité)
+**Portée :** [C1 : Entité](#c1_Entite)
 
 ---
 
@@ -251,7 +266,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 
 > Relation de possession entre une entité et une entreprise publique.
 
-**Domaine :** [C1 : Entité](#c1--entité)
+**Domaine :** [C1 : Entité](#c1_Entite)
 
-**Portée :** [C5 : Entreprise publique](#c5--entreprise-publique)
+**Portée :** [C5 : Entreprise publique](#c5_Entreprise_Publique)
 

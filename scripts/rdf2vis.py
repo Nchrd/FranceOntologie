@@ -10,6 +10,9 @@ g = Graph()
 # Parse in an RDF file hosted on the Internet
 g.parse("./../Data.ttl")
 
+model = Graph()
+model.parse("./../FrOnt.ttl")
+
 def generateModelImage(g: Graph):
     """
     Generates a PNG image from an RDFS graph using the rdfs2dot tool.
@@ -45,6 +48,7 @@ def generateModelImage(g: Graph):
         rdfs2dot(g, f)
 
     system("dot -Tpng output.dot -o output.png")
+    system("rm output.dot")
 
 def generateDataHtmlGraph(g: Graph, outputFile: str = "data.html"):
     """
@@ -104,3 +108,4 @@ def generateDataHtmlGraph(g: Graph, outputFile: str = "data.html"):
     net.write_html("../" + outputFile)
 
 generateDataHtmlGraph(g, "test.html")
+#generateModelImage(model)

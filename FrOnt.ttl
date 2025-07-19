@@ -80,6 +80,11 @@ front:c14_Administration_Locale_Diverse rdf:type rdfs:Class ;
     rdfs:comment "Classe regroupant toutes les Administrations Territoriales autres que les APUL" ;
     rdfs:subClassOf front:c7_APUL .
 
+front:c15_GIP rdf:type rdfs:Class ;
+    rdfs:label "Groupement d'Intérêt public" ;
+    rdfs:comment "Classe regroupant toutes les GIP, qui sont un type d'administration publique" ;
+    rdfs:subClassOf front:c4_Administration_Publique .
+
 #################################################################
 #    Object Properties
 #################################################################

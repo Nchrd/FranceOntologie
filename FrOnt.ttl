@@ -85,6 +85,11 @@ front:c15_GIP rdf:type rdfs:Class ;
     rdfs:comment "Classe regroupant toutes les GIP, qui sont un type d'administration publique" ;
     rdfs:subClassOf front:c4_Administration_Publique .
 
+front:c16_Commission_Et_Instance_Ministerielle_Consultative_Ou_Deliberative rdf:type rdfs:Class ;
+    rdfs:label "Commission et instance ministérielle consultative ou délibérative" ;
+    rdfs:comment "Classe regroupant toutes les Commission et instance ministérielle consultative ou délibérative, qui sont un type d'administration publique" ;
+    rdfs:subClassOf front:c4_Administration_Publique .
+
 #################################################################
 #    Object Properties
 #################################################################

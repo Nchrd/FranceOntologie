@@ -171,6 +171,7 @@ def submitForm():
         label = unicodedata.normalize('NFD', label)
         label = ''.join([c for c in label if unicodedata.category(c) != 'Mn'])
         label = label.casefold().replace(" ", "_")
+        label = label.replace("'", "_")
         return label
 
     # Create a new URI for the data element

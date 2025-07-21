@@ -88,6 +88,7 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 - [C8 : ASSO](#c8_ASSO)
 - [C9 : SCN](#c9_SCN)
 - [C15 : GIP](#c15_GIP)
+- [C16 : Commission et instance ministérielle consultative ou délibérative](#c16_Commission_Et_Instance_Ministerielle_Consultative_Ou_Deliberative)
 
 **Propriétés :** Aucune
 
@@ -243,6 +244,20 @@ Nous espérons que cette documentation vous sera utile pour comprendre et utilis
 **Nom complet :** Groupement d'Intérêt public
 
 > Classe regroupant tous les Groupements d'Intérets Publics
+
+**Classe mère :** [C4 : Administration publique](#c4_Administration_Publique)
+
+**Classes filles :** Aucune
+
+**Propriétés :** Aucune
+
+---
+
+## C16 : Commission et instance ministérielle consultative ou délibérative {#c16_Commission_Et_Instance_Ministerielle_Consultative_Ou_Deliberative}
+
+**Nom complet :** Commission et instance ministérielle consultative ou délibérative
+
+> Classe regroupant toutes les Commission et instance ministérielle consultative ou délibérative
 
 **Classe mère :** [C4 : Administration publique](#c4_Administration_Publique)
 
